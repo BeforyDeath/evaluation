@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/jquery.tablesorter/dist/css/theme.default.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="vendors/jquery.tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+    <script src="vendors/jquery.tablesorter/dist/js/jquery.tablesorter.widgets.min.js"></script>
+    <script src="vendors/jquery.tablesorter/dist/js/widgets/widget-columnSelector.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row" id="evaluation">
+        <div class="col-lg-12 text-center">
+            <h1>Рейтинг</h1>
+            <div class="col-lg-12">
+                <div class="eval center-block">
+                    <div class="eval-2">
+                        <div class="title"><span>Второе место</span></div>
+                        <div class="block"><span>2</span></div>
+                    </div>
+                    <div class="eval-1">
+                        <div class="title"><span>Первое место</span></div>
+                        <div class="block"><span>1</span></div>
+                    </div>
+                    <div class="eval-3">
+                        <div class="title"><span>Третье место</span></div>
+                        <div class="block"><span>3</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="button-menu">
+        <div class="col-lg-12">
+            <button id="popover" type="button" class="btn btn-default btn-sm">Показать / скрыть
+                <span class="caret"></span>
+            </button>
+            <div class="hidden">
+                <div id="popover-target"></div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Добавить фильтр
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="filter-menu"></ul>
+            </div>
+            <button class="reset btn btn-default btn-sm">Сбросить фильтры</button>
+        </div>
+    </div>
+
+    <div class="row" id="filtered">
+        <div class="col-lg-12">
+            <div class="row" id="vis-filters"></div>
+        </div>
+    </div>
+
+    <div class="row" id="table-sort">
+        <div class="col-lg-12">
+            <div id="table"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ##############################################################################################################-->
+
+<!-- modal windows -->
+<div class="modal fade" id="filter-adding" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title">Добавить фильтр #</h5>
+            </div>
+
+            <div class="modal-body"> insert modal-body-hidden filter</div>
+
+            <div class="modal-footer">
+                <button class="btn btn-info" data-dismiss="modal">Применить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal windows -->
+
+<!-- ##############################################################################################################-->
+
+<!-- filter-match hidden-->
+<div id="filter-match" class="modal-body-hidden">
+
+    <div class="filter-match">
+        <div class="btn-group form-adding-condition">
+            <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Добавить условие
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" data-filter-name="more">Больше</a></li>
+                <li><a href="#" data-filter-name="less">Меньше</a></li>
+                <li><a href="#" data-filter-name="equally">Равно</a></li>
+                <li><a href="#" data-filter-name="range">Промежуток</a></li>
+            </ul>
+        </div>
+
+        <div class="filter-condition">
+            insert filter-condition-hidden type filter
+        </div>
+    </div>
+
+</div>
+<!-- end filter-match hidden -->
+
+<!-- form-condition-hidden -->
+<div class="filter-condition-hidden">
+
+    <div class="input-group" data-filter-name="more">
+        <div class="input-group-addon">&gt;</div>
+        <input type="text" class="form-control input-sm">
+        <div class="input-group-addon btn btn-info delete">&#10006;</div>
+    </div>
+
+    <div class="input-group" data-filter-name="less">
+        <div class="input-group-addon">&lt;</div>
+        <input type="text" class="form-control input-sm">
+        <div class="input-group-addon btn btn-info delete">&#10006;</div>
+    </div>
+
+    <div class="input-group" data-filter-name="equally">
+        <div class="input-group-addon">&#61;</div>
+        <input type="text" class="form-control input-sm">
+        <div class="input-group-addon btn btn-info delete">&#10006;</div>
+    </div>
+
+    <div class="input-group" data-filter-name="range">
+        <div class="input-group-addon">&hArr;</div>
+        <input type="text" class="form-control input-sm">
+        <input type="text" class="form-control input-sm">
+        <div class="input-group-addon btn btn-info delete">&#10006;</div>
+    </div>
+
+</div>
+<!-- end form-condition-hidden -->
+
+<!-- filter-enum hidden -->
+<div id="filter-enum" class="modal-body-hidden">
+
+    <div class="filter-enum">
+
+        <div class="filter-condition"></div>
+
+    </div>
+
+</div>
+<!-- end filter-enum hidden -->
+
+<!-- vis-filter-hidden -->
+<div id="vis-filter" class="vis-filter-hidden">
+    <div class="col-lg-4 vis-filter">
+        <div class="well well-sm">
+            <span class="name"></span><span class="filter"></span>
+            <button class="btn bg-info btn-xs pull-right delete">&#10006;</button>
+        </div>
+    </div>
+</div>
+<!-- end vis-filter-hidden -->
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

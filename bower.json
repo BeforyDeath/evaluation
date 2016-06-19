@@ -1,0 +1,8 @@
+{
+  "name": "evaluation",
+  "dependencies": {
+    "jquery": "^2.2",
+    "bootstrap": "^3.3.6",
+    "jquery.tablesorter": "^2.26"
+  }
+}

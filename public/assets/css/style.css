@@ -1,0 +1,99 @@
+table td, table th{
+    text-align: center;
+    font-size: 10px;
+}
+table td:first-child{
+    width: 100px;
+    text-align: left;
+}
+table td {
+    border-right: 1px solid #eee;
+}
+.eval {
+    width: 360px;
+}
+
+.eval-1, .eval-2, .eval-3 {
+    padding: 0;
+    float: left;
+}
+
+.eval-1 > div > span, .eval-2 > div > span, .eval-3 > div > span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 120px;
+    font-size: 10px;
+}
+
+.eval-1 .title span, .eval-2 .title span, .eval-3 .title span {
+    vertical-align: bottom;
+    height: 90px;
+    padding-bottom: 10px;
+}
+
+.eval-1 .block span, .eval-2 .block span, .eval-3 .block span {
+    height: 50px;
+    background-color: #eea85c;
+    -webkit-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+
+.eval-1 .title span {
+    height: 50px;
+}
+
+.eval-1 .block span {
+    height: 90px;
+    background-color: #d7ee5d;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.eval-2 .title span {
+    height: 70px;
+}
+
+.eval-2 .block span {
+    height: 70px;
+    background-color: #00b3ee;
+    -webkit-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+
+}
+/* ############################################ */
+.well {
+    margin-bottom: 2px;
+}
+#evaluation, #button-menu, #table-sort{
+    margin-bottom: 20px;
+}
+
+.modal-body-hidden, .filter-condition-hidden, .vis-filter-hidden{
+    display: none;
+}
+.select-enum{
+    min-height: 200px;
+}
+
+.filter-condition .input-group {
+    margin: 10px 0;
+}
+.filter-condition .input-group .input-group-addon:first-child {
+    font-weight: bold;
+    width: 60px!important;
+}
+.filter-condition .input-group .input-group-addon:last-child {
+    color: #790000;
+}
+#filtered span.name{
+    font-weight: bold;
+}
+
+#popover-target label{
+    display: block;
+}
+#popover-target .disabled{
+    color: #AAA!important;
+    cursor: not-allowed;
+}

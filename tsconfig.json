@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": false,
+    "removeComments": true,
+    "outFile": "public/assets/js/app.js"
+  }
+//  "files": [
+//    "ts/Records.ts",
+//    "ts/Table.ts",
+//    "ts/App.ts"
+//  ]
+
+}

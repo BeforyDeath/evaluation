@@ -1,0 +1,13 @@
+{
+  "fileId": "1jpIFBNAWVDntg1PCw7mtrC76YmSXLuYBXkvj_IPDkDI",
+  "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "table": {
+    "sheetName": "20XX года",
+    "columnOptions": 0,
+    "ColumnShortNames": 1,
+    "columnNames": 2,
+    "columnData": 3
+  },
+  "listen": ":8095",
+  "logFile": false
+}
