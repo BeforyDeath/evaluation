@@ -60,7 +60,7 @@ func (xt *xlsxTable) ParseXLSX(filename string) error {
 
 func (xt *xlsxTable) getColumns(xlsx *xlsx.File) {
 
-	var Columns, SecretColumns []column
+	var Columns []column
 
 	for col := 0; col <= xt.MaxCol; col++ {
 		name := xlsx.Sheet[Config.Table.SheetName].Cell(Config.Table.ColumnNames, col).Value
