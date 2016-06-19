@@ -3,6 +3,7 @@
 Парсинг таблицы из Google Диск, отображение её на сайте, с фильтрацией и сортировкой
 
 ##### Example: http://evaluation.beforydeath.ru
+##### Google XLSX File : https://docs.google.com/spreadsheets/d/1jpIFBNAWVDntg1PCw7mtrC76YmSXLuYBXkvj_IPDkDI/edit?usp=sharing
 
 ### Столбцы, настройка
 Строки в документе, настраиваются в файле `/config/config.json`

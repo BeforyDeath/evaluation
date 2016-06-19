@@ -1,14 +1,17 @@
-table td, table th{
+table td, table th {
     text-align: center;
     font-size: 10px;
 }
-table td:first-child{
+
+table td:first-child {
     width: 100px;
     text-align: left;
 }
+
 table td {
     border-right: 1px solid #eee;
 }
+
 .eval {
     width: 360px;
 }
@@ -61,39 +64,50 @@ table td {
     border-radius: 5px 0 0 0;
 
 }
+
 /* ############################################ */
 .well {
     margin-bottom: 2px;
 }
-#evaluation, #button-menu, #table-sort{
+
+#evaluation .eval {
+    display: none;
+}
+
+#evaluation, #button-menu, #table-sort {
     margin-bottom: 20px;
 }
 
-.modal-body-hidden, .filter-condition-hidden, .vis-filter-hidden{
+.modal-body-hidden, .filter-condition-hidden, .vis-filter-hidden {
     display: none;
 }
-.select-enum{
+
+.select-enum {
     min-height: 200px;
 }
 
 .filter-condition .input-group {
     margin: 10px 0;
 }
+
 .filter-condition .input-group .input-group-addon:first-child {
     font-weight: bold;
-    width: 60px!important;
+    width: 60px !important;
 }
+
 .filter-condition .input-group .input-group-addon:last-child {
     color: #790000;
 }
-#filtered span.name{
+
+#filtered span.name {
     font-weight: bold;
 }
 
-#popover-target label{
+#popover-target label {
     display: block;
 }
-#popover-target .disabled{
-    color: #AAA!important;
+
+#popover-target .disabled {
+    color: #AAA !important;
     cursor: not-allowed;
 }
